@@ -8,7 +8,7 @@ function [Dd Dt X iter term] = RDNMF(Y, N_samples, R, Rd,alpha,beta,Dd,Dt,X,outm
 %        Array N_samples(Number of samples in each class),
 %        R(number of medial components),
 %        Rd(the number of columns in Dd_l),
-%        optimization weight lambda, alpha
+%        optimization weight alpha,beta
 %		 Dd, Dt, X: initialized dictionary and code (fill [] if not have)
 %        outmid: whether output the results every 20 updating steps
 %		 plotmode: 1-> plot in white background and black content
@@ -16,7 +16,7 @@ function [Dd Dt X iter term] = RDNMF(Y, N_samples, R, Rd,alpha,beta,Dd,Dt,X,outm
 %		 imgwidth: the width of each image
 %
 % Output:
-%         Discriminative Basis Matrix 'Dd'(M*Rc),
+%         Discriminative Basis Matrix 'Dd'(M*Rd),
 %         Tolerate Basis Matrix 'Dd'(M*Rt),
 %         Coefficient Matrix 'X'(R*N),
 %		  number of iteration before convergence 'iter'
